@@ -9,7 +9,6 @@ const AddSubscriptionModal = () => {
   const [name, setSubscription] = useState("");
   const [date, setDate] = useState("");
   const [amount, setAmount] = useState(0);
-  const [error, setError] = useState(true);
 
   const [open, setOpen] = useState(false);
 
@@ -59,12 +58,12 @@ const AddSubscriptionModal = () => {
         <Box sx={style}>
           <Typography variant="h4">Add Subscription</Typography>
           <TextField
-            error={error}
+            // error={error}
             label="Subscription Name"
             variant="outlined"
             value={name}
             onChange={(e) => setSubscription(e.target.value)}
-            helperText={error ? "Can't be blank" : null}
+            // helperText={error ? "Can't be blank" : null}
           />
           <TextField
             type="date"
